@@ -5,5 +5,5 @@ The code uses the tools and bitcoin dataset developed by http://compbio.cs.uic.e
 Steps:
 1.Generate file user_edges.txt
 2. Run "./run_user_edges.sh" to generate "output.txt"
-3. "toy.txt"  is used in place of "output.txt" as sample data of 24 transactions
+3. "toy.txt"  is used in place of "output.txt" as sample data of 1000 transactions
 4. Run "python Find_Graph_Stats.py"
