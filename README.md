@@ -1,4 +1,4 @@
-Bitcoin_Project
+Bitcoin
 ===============
 The code uses the tools and bitcoin dataset developed by http://compbio.cs.uic.edu/data/bitcoin/. It then parses "user_edges.txt" into a graph using Networkx module. Edges are created with attributes- date, number of bitcoins and transaction key. Finally, it prints information about the graph like edges, nodes, number of edges, indegree, outdegree, if the graph is strongly or weakly connected,number of strongly and weakly connected components and strongly and weakly connected subgraphs.
 
