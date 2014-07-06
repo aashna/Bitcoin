@@ -1,7 +1,7 @@
 import networkx as nx
 
 G=nx.DiGraph()
-path='/home/aashna/Desktop/sample.txt'
+path='/home/aashna/Desktop/toy.txt'
 f=open(path,'rb')
 
 #parsing edge list into graph
