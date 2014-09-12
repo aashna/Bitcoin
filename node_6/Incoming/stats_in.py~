@@ -1,0 +1,30 @@
+import sys
+import numpy as np
+btcs=[]
+
+with open('sorted_clubbed_out_btc.txt', 'r') as my_file:
+    for line in my_file:
+        columns = line.strip().split(',')
+        btcs.append(float(columns[3]))
+
+btcs.sort()
+
+max_num = max(btcs)
+min_num = min(btcs)
+sum_of_nums = sum(btcs)
+count=len(btcs)
+avg=sum_of_nums/count
+
+#median = btcs[len(btcs)//2]
+#mode = max(btcs, key=lambda n: btcs.count(n))
+
+print("max")
+print max_num
+print("min")
+print min_num
+print("sum")
+print sum_of_nums
+print("avg")
+print np.average(btcs)
+print("median")
+print np.median(btcs)

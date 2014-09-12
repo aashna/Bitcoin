@@ -1,0 +1,32 @@
+import networkx as nx
+import subprocess
+import matplotlib.pyplot as pl
+
+G=nx.DiGraph()
+G=nx.read_edgelist("sorted_clubbed_in.txt",delimiter=',', data=(('date',int),('btc',float),('txkey',int)))
+
+#nx.draw(G)
+node_sizes = []
+labels={}
+
+
+for u,v,d in G.edges(data=True):
+        node_sizes.append( ( int(d['btc']) ))
+
+for n in G.nodes():
+ labels[n]=n
+'''      
+pos=nx.spring_layout(G) # positions for all nodes
+
+# nodes
+nx.draw_networkx_nodes(G,pos,node_size=100)
+
+nx.draw_networkx_edges(G,pos,arrows=True)
+# labels
+nx.draw_networkx_labels(G,pos,font_size=5,font_family='sans-serif')  
+#nx.draw_networkx_edge_labels(G,pos)
+
+''' 
+nx.draw_random(G, node_size = node_sizes,arrows=True)  
+pl.draw()
+pl.show()
